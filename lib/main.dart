@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
-import 'auth_page.dart';  // Bu satırı ekleyin
-
-// ... existing code ...
+import 'package:provider/provider.dart';
+import 'features/auth/view/auth_view.dart';
+import 'features/auth/viewmodel/auth_viewmodel.dart';
+import 'features/dashboard/viewmodel/dashboard_viewmodel.dart';
+import 'core/theme/app_theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -18,13 +17,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => AuthViewModel()),
+        ChangeNotifierProvider(create: (_) => DashboardViewModel()),
+      ],
+      child: MaterialApp(
+        title: 'Tarım Pazarı',
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme.lightTheme,
+        home: const AuthView(),
       ),
-      home: const AuthPage(),  // MyHomePage yerine AuthPage
     );
   }
 }
-// ... existing code ...

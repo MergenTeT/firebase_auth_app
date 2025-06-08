@@ -1,16 +1,66 @@
-# firebase_app
+# Tarım Pazarı Uygulaması
 
-A new Flutter project.
+Çiftçiler ve alıcıları buluşturan modern bir pazar yeri uygulaması.
 
-## Getting Started
+## 🌟 Özellikler
 
-This project is a starting point for a Flutter application.
+### Version 0.0.1
+- ✅ Firebase Authentication ile güvenli giriş sistemi
+- ✅ Rol tabanlı kullanıcı yönetimi (Çiftçi/Alıcı/Her İkisi)
+- ✅ Modern ve kullanıcı dostu arayüz
+- ✅ Gelişmiş ürün filtreleme ve arama
+- ✅ Kategori bazlı ürün listeleme
+- ✅ Fiyat aralığı filtreleme
+- ✅ Dinamik sıralama seçenekleri
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ Kullanılan Teknolojiler
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter
+- Firebase (Authentication, Firestore)
+- Provider (State Management)
+- Material 3 Design
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📱 Ekran Görüntüleri
+
+[Ekran görüntüleri eklenecek]
+
+## 🚀 Kurulum
+
+1. Projeyi klonlayın:
+```bash
+git clone https://github.com/MergenTeT/tarim_pazari.git
+```
+
+2. Bağımlılıkları yükleyin:
+```bash
+flutter pub get
+```
+
+3. Firebase yapılandırma dosyalarını ekleyin:
+   - android/app/google-services.json
+   - ios/Runner/GoogleService-Info.plist
+
+4. Uygulamayı çalıştırın:
+```bash
+flutter run
+```
+
+## 📝 Yapılacaklar
+
+- [ ] Ürün detay sayfası
+- [ ] Ürün ekleme/düzenleme
+- [ ] Mesajlaşma sistemi
+- [ ] Bildirimler
+- [ ] Profil yönetimi
+
+## 🤝 Katkıda Bulunma
+
+1. Bu depoyu fork edin
+2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
+3. Değişikliklerinizi commit edin (`git commit -m 'feat: Add some amazing feature'`)
+4. Branch'inizi push edin (`git push origin feature/amazing-feature`)
+5. Pull Request oluşturun
+
+## 📄 Lisans
+
+Bu proje [MIT](LICENSE) lisansı altında lisanslanmıştır.
